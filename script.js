@@ -165,4 +165,60 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    /* =========================================
+       CONTACT FORM SUBMISSION
+       ========================================= */
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(contactForm);
+            
+            try {
+                // Using FormSubmit for simple email forwarding without backend
+                const response = await fetch('https://formsubmit.co/ajax/dhabharath2104@gmail.com', {
+                    method: 'POST',
+                    headers: { 
+                        'Accept': 'application/json'
+                    },
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    submitBtn.innerHTML = '<span>Message Sent!</span> <i class="fas fa-check"></i>';
+                    submitBtn.style.backgroundColor = '#28a745';
+                    submitBtn.style.borderColor = '#28a745';
+                    contactForm.reset();
+                    
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.style.backgroundColor = '';
+                        submitBtn.style.borderColor = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                submitBtn.innerHTML = '<span>Error! Try Again</span> <i class="fas fa-exclamation-triangle"></i>';
+                submitBtn.style.backgroundColor = '#dc3545';
+                submitBtn.style.borderColor = '#dc3545';
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.style.backgroundColor = '';
+                    submitBtn.style.borderColor = '';
+                    submitBtn.disabled = false;
+                }, 3000);
+            }
+        });
+    }
 });

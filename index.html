@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bharath D </title>
+    <title>Bharath D | Full-Stack Developer</title>
     <meta name="description"
         content="Portfolio of Bharath D, an aspiring Full-Stack Developer skilled in React, Node.js, Java, and scalable web applications.">
     <!-- Google Fonts -->
-    <link rel="icon" type="image/png" href="external-computer-science-computer-science-flaticons-lineal-color-flat-icons.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
@@ -72,9 +71,7 @@
                 <div class="social-links-hero hidden">
                     <a href="https://www.linkedin.com/in/bharath-dhandapani-0a683431a/" target="_blank"
                         class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:dhabharath2104@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-                    <!-- Placeholder for GitHub if available -->
-                    <a href="https://github.com/bharath-dhandapani" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/bharath-dhandapani" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </section>
@@ -89,15 +86,7 @@
                     <div class="about-text hidden">
                         <div class="glass-card">
                             <p>
-                                I am an aspiring <strong>Software Engineer</strong> currently pursuing my B.E. in
-                                Computer Science and Engineering at Easwari Engineering College, Chennai (Expected 2027,
-                                CGPA 8.65).
-                            </p>
-                            <p>
-                                With a strong focus on efficient system design and continuous learning, I have honed my
-                                skills in both frontend and backend development through challenging internships and
-                                real-world projects. I am deeply interested in green cloud solutions, secure
-                                architectures, and creating seamless user experiences.
+                                Pursuing B.E. in Computer Science and Engineering at Easwari Engineering College, Chennai (Expected 2027, CGPA: 8.65).
                             </p>
                             <div class="quick-facts">
                                 <div class="fact-item">
@@ -199,15 +188,6 @@
                                 system/process metrics, structure JSON data outputs, and optimize performance monitoring
                                 dashboards.
                             </p>
-                    
-                            <!-- ✅ Added GitHub Link -->
-                            <div class="project-links" style="margin-top:10px;">
-                                <a href="https://github.com/bharath-dhandapani/WindowsThreadLockMonitoring" 
-                                   target="_blank" 
-                                   title="GitHub Repository">
-                                   <i class="fab fa-github"></i> View Project
-                                </a>
-                            </div>
                         </div>
                     </div>
                     <!-- 1M1B -->
@@ -247,17 +227,14 @@
                                     <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </div>
-                            <h3 class="project-title">Bank Management System</h3>
+                            <h3 class="project-title">Rural CareX</h3>
                             <p class="project-description">
-                                A full-stack web application for managing customer accounts, transactions, and loan
-                                processing. Designed secure CRUD operations with authentication, ensuring data
-                                integrity. Features a browser-based dashboard for admins and customers.
+                                A healthcare platform designed for rural areas to streamline patient management and improve accessibility to resources. Built using Antigravity for development.
                             </p>
                             <div class="project-tech">
-                                <span>Flask</span>
-                                <span>MySQL</span>
-                                <span>HTML/CSS</span>
-                                <span>JavaScript</span>
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>Antigravity</span>
                             </div>
                         </div>
                     </div>
@@ -295,13 +272,15 @@
                                 <div class="project-links">
                                     <a href="https://github.com/bharath-dhandapani/PORTFOLIO"
                                         title="GitHub Repository"><i class="fab fa-github"></i></a>
-                                    <a href="#" title="Live Demo"><i
+                                    <a href="https://bharath-dhandapani.github.io/Portifilo/" title="Live Demo"><i
                                             class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </div>
                             <h3 class="project-title">Personal Portfolio</h3>
                             <p class="project-description">
-                                A modern, responsive, and dynamic personal portfolio website engineered to showcase skills, experience, and projects. Features a fully custom UI with glassmorphism, responsive navigation, and smooth scroll animations.
+                                A modern, responsive, and dynamic personal portfolio website engineered to showcase
+                                skills, experience, and projects. Features a fully custom UI with glassmorphism,
+                                responsive navigation, and smooth scroll animations.
                             </p>
                             <div class="project-tech">
                                 <span>HTML5</span>
@@ -354,18 +333,22 @@
                         </div>
                     </div>
 
-                    <form class="contact-form glass-card">
+                    <form id="contact-form" class="contact-form glass-card">
+                        <!-- Disable Captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+
                         <div class="input-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
                         </div>
                         <div class="input-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
+                            <input type="email" name="email" id="email" placeholder="Your Email" required>
                         </div>
                         <div class="input-group">
-                            <input type="text" id="subject" placeholder="Subject" required>
+                            <input type="text" name="_subject" id="subject" placeholder="Subject" required>
                         </div>
                         <div class="input-group">
-                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                            <textarea name="message" id="message" rows="5" placeholder="Your Message"
+                                required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-submit">
                             <span>Send Message</span>
@@ -392,7 +375,7 @@
                     <a href="https://www.linkedin.com/in/bharath-dhandapani-0a683431a/" target="_blank"><i
                             class="fab fa-linkedin-in"></i></a>
                     <a href="mailto:dhabharath2104@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://github.com/bharath-dhandapani"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/bharath-dhandapani" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">

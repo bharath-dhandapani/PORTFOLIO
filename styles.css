@@ -799,9 +799,8 @@ h6 {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact-info {
